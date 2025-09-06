@@ -2,7 +2,7 @@ from django.db import models
 from django.conf import settings
 
 
-class Tarefas(models.Model):
+class Tarefa(models.Model):
     titulo = models.CharField(max_length=150)
     descricao = models.TextField()
     concluido = models.BooleanField(default=False)

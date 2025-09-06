@@ -1,7 +1,11 @@
 from pathlib import Path
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = "django-insecure-))@50x!*biwe!5fxzmx3g=ze#!y*-^lcit#9hb@*+0&am==5&v"
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
 
@@ -72,9 +76,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "pt-br"
 
-TIME_ZONE = "UTC"
+TIME_ZONE = "America/Sao_Paulo"
 
 USE_I18N = True
 

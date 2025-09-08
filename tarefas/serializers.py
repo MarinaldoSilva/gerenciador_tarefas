@@ -6,8 +6,7 @@ class Tarefaerializer(serializers.ModelSerializer):
         model = Tarefa
         #fields = '__all__'
         fields = ['titulo', 'descricao', 'data_criacao', 'concluido', 'dono',  'id']
-        #dessa forma o id esta oculto
-
+    #fora dos arquivos de metadados
     dono = serializers.StringRelatedField(read_only=True)
     
     """

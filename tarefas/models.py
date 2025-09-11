@@ -9,5 +9,8 @@ class Tarefa(models.Model):
     data_criacao = models.DateTimeField(auto_now_add=True)
     dono = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
+    """Diz ao banco de dados que a combinação de 'titulo' e 'descrição' deve ser única."""
+    unique_together = ['titulo', 'descricao']
+
     def __str__(self):
         return f"{self.titulo}: {self.descricao}"

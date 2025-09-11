@@ -1,5 +1,4 @@
 .env
-.env/
 
 migrations/
 migrations
@@ -11,5 +10,3 @@ venv/
 venv
 
 db.sqlite3
-.db.sqlite3
-db.sqlite3/

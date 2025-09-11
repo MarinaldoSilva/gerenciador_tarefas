@@ -89,3 +89,11 @@ STATIC_URL = "static/"
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 AUTH_USER_MODEL = 'user.User'
+
+
+"""com o ordering_fields = ['titulo','data_criacao'] declaramos no View.py temos que dizer ao drf que vamos usar essa paginação no projeto todo por padrão uqe fica no dic REST_FRAMEWORK que vamos criar para isso."""
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE':10
+}

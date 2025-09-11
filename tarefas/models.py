@@ -10,4 +10,4 @@ class Tarefa(models.Model):
     dono = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f"{self.titulo}"
+        return f"{self.titulo}: {self.descricao}"
